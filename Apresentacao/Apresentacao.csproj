@@ -1,0 +1,653 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FD6A9E2-D6D9-4EC6-85BB-27D89E16CF64}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SqlMs</RootNamespace>
+    <AssemblyName>SqlMs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\henri\Desktop\teste\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6ACF097D5AF504DACCF2B512AE7F686B83BB6B9E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>SqlMs_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Basic 2005 Power Packs\3.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\ComboboxEditora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\ComboboxEditora.Designer.cs">
+      <DependentUpon>ComboboxEditora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\ComboAutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\ComboAutor.Designer.cs">
+      <DependentUpon>ComboAutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\CadastroComboGenero.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\Cadastros ComboBox\CadastroComboGenero.Designer.cs">
+      <DependentUpon>CadastroComboGenero.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\CrystalReportListaAlunos.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportListaAlunos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\FormRelatorioListaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\FormRelatorioListaAluno.Designer.cs">
+      <DependentUpon>FormRelatorioListaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\ConsultaFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\ConsultaFuncionario.Designer.cs">
+      <DependentUpon>ConsultaFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Backup\Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Backup\Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\CrystalReportVencidos .cs">
+      <DependentUpon>CrystalReportVencidos .rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\CrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoConsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoConsu.Designer.cs">
+      <DependentUpon>EmprestimoAlunoConsu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosDevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosDevo.Designer.cs">
+      <DependentUpon>EmprestimosExternosDevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosRenova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosRenova.Designer.cs">
+      <DependentUpon>EmprestimosExternosRenova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosPainel.Designer.cs">
+      <DependentUpon>EmprestimosExternosPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoDevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoDevo.Designer.cs">
+      <DependentUpon>EmprestimoAlunoDevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoRenova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoRenova.Designer.cs">
+      <DependentUpon>EmprestimoAlunoRenova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoPainel.Designer.cs">
+      <DependentUpon>EmprestimoAlunoPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosExternos\EmprestimosExternosAdd.Designer.cs">
+      <DependentUpon>EmprestimosExternosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosAlunos\EmprestimoAlunoAdd.Designer.cs">
+      <DependentUpon>EmprestimoAlunoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoAdd.Designer.cs">
+      <DependentUpon>ExternoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoConsulta.Designer.cs">
+      <DependentUpon>ExternoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoEditar.Designer.cs">
+      <DependentUpon>ExternoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Externos\ExternoPainel.Designer.cs">
+      <DependentUpon>ExternoPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoAdd.Designer.cs">
+      <DependentUpon>AlunoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoConsulta.Designer.cs">
+      <DependentUpon>AlunoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoPainel.Designer.cs">
+      <DependentUpon>AlunoPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoDevolucaoProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoDevolucaoProfessor.Designer.cs">
+      <DependentUpon>EmprestimoDevolucaoProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoRenovacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoRenovacao.Designer.cs">
+      <DependentUpon>EmprestimoRenovacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosPendentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosPendentes.Designer.cs">
+      <DependentUpon>EmprestimosPendentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Alunos\AlunoEditar.Designer.cs">
+      <DependentUpon>AlunoEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoPainel.Designer.cs">
+      <DependentUpon>EmprestimoPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmprestimosProfessor\EmprestimoAdd.Designer.cs">
+      <DependentUpon>EmprestimoAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroConsulta.Designer.cs">
+      <DependentUpon>LivroConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidAdd.Designer.cs">
+      <DependentUpon>LivroDidAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidAlt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidAlt.Designer.cs">
+      <DependentUpon>LivroDidAlt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidExc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LivroDid\LivroDidExc.Designer.cs">
+      <DependentUpon>LivroDidExc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroPainel.Designer.cs">
+      <DependentUpon>LivroPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\LivroEditar.Designer.cs">
+      <DependentUpon>LivroEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Livros\LivrosAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Livros\LivrosAdd.Designer.cs">
+      <DependentUpon>LivrosAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorAdd.Designer.cs">
+      <DependentUpon>ProfessorAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorConsulta.Designer.cs">
+      <DependentUpon>ProfessorConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorPainel.Designer.cs">
+      <DependentUpon>ProfessorPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioAdd.Designer.cs">
+      <DependentUpon>FuncionarioAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Backup\ImportarBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Backup\ImportarBackup.Designer.cs">
+      <DependentUpon>ImportarBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioEditar.Designer.cs">
+      <DependentUpon>FuncionarioEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioRestricoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\FuncionarioRestricoes.Designer.cs">
+      <DependentUpon>FuncionarioRestricoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginTela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginTela.designer.cs">
+      <DependentUpon>LoginTela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Professor\ProfessorEditar.Designer.cs">
+      <DependentUpon>ProfessorEditar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\Painel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Funcionarios\Painel.Designer.cs">
+      <DependentUpon>Painel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RelatorioExternos\PainelRelatorioExternos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RelatorioExternos\PainelRelatorioExternos.Designer.cs">
+      <DependentUpon>PainelRelatorioExternos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\RelatorioAluno\RelatorioAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\RelatorioAluno.Designer.cs">
+      <DependentUpon>RelatorioAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\FormRelatoriosEmpAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RelatorioAluno\FormRelatoriosEmpAlunos.Designer.cs">
+      <DependentUpon>FormRelatoriosEmpAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TelaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="teste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="teste.Designer.cs">
+      <DependentUpon>teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilidades.cs" />
+    <EmbeddedResource Include="Forms\Livros\Cadastros ComboBox\CadastroComboGenero.resx">
+      <DependentUpon>CadastroComboGenero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\Cadastros ComboBox\ComboAutor.resx">
+      <DependentUpon>ComboAutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\Cadastros ComboBox\ComboboxEditora.resx">
+      <DependentUpon>ComboboxEditora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioAluno\CrystalReportListaAlunos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportListaAlunos.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioAluno\FormRelatorioListaAluno.resx">
+      <DependentUpon>FormRelatorioListaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alunos\AlunoConsulta.aa-DJ.resx">
+      <DependentUpon>AlunoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Backup\Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios\FuncionarioEditar.resx">
+      <DependentUpon>FuncionarioEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioAluno\CrystalReportVencidos .rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportVencidos .cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioAluno\CrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosAlunos\EmprestimoAlunoConsu.resx">
+      <DependentUpon>EmprestimoAlunoConsu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosExternos\EmprestimosExternosDevo.resx">
+      <DependentUpon>EmprestimosExternosDevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosExternos\EmprestimosExternosPainel.resx">
+      <DependentUpon>EmprestimosExternosPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosAlunos\EmprestimoAlunoDevo.resx">
+      <DependentUpon>EmprestimoAlunoDevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosAlunos\EmprestimoAlunoRenova.resx">
+      <DependentUpon>EmprestimoAlunoRenova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosAlunos\EmprestimoAlunoPainel.resx">
+      <DependentUpon>EmprestimoAlunoPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosExternos\EmprestimosExternosAdd.resx">
+      <DependentUpon>EmprestimosExternosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosAlunos\EmprestimoAlunoAdd.resx">
+      <DependentUpon>EmprestimoAlunoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosExternos\EmprestimosExternosRenova.resx">
+      <DependentUpon>EmprestimosExternosRenova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Externos\ExternoAdd.resx">
+      <DependentUpon>ExternoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Externos\ExternoConsulta.resx">
+      <DependentUpon>ExternoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Externos\ExternoEditar.resx">
+      <DependentUpon>ExternoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Externos\ExternoPainel.resx">
+      <DependentUpon>ExternoPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alunos\AlunoAdd.resx">
+      <DependentUpon>AlunoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alunos\AlunoConsulta.resx">
+      <DependentUpon>AlunoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alunos\AlunoPainel.resx">
+      <DependentUpon>AlunoPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosProfessor\EmprestimoDevolucaoProfessor.resx">
+      <DependentUpon>EmprestimoDevolucaoProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosProfessor\EmprestimoRenovacao.resx">
+      <DependentUpon>EmprestimoRenovacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosPendentes.resx">
+      <DependentUpon>EmprestimosPendentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Alunos\AlunoEditar.resx">
+      <DependentUpon>AlunoEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosProfessor\EmprestimoPainel.resx">
+      <DependentUpon>EmprestimoPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmprestimosProfessor\EmprestimoAdd.resx">
+      <DependentUpon>EmprestimoAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\LivroConsulta.resx">
+      <DependentUpon>LivroConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\LivroPainel.resx">
+      <DependentUpon>LivroPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\LivroEditar.resx">
+      <DependentUpon>LivroEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Livros\LivrosAdd.resx">
+      <DependentUpon>LivrosAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Professor\ProfessorAdd.resx">
+      <DependentUpon>ProfessorAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Professor\ProfessorConsulta.resx">
+      <DependentUpon>ProfessorConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Professor\ProfessorPainel.resx">
+      <DependentUpon>ProfessorPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Professor\ProfessorEditar.resx">
+      <DependentUpon>ProfessorEditar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios\FuncionarioAdd.resx">
+      <DependentUpon>FuncionarioAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Backup\ImportarBackup.resx">
+      <DependentUpon>ImportarBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios\FuncionarioRestricoes.resx">
+      <DependentUpon>FuncionarioRestricoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginTela.resx">
+      <DependentUpon>LoginTela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Funcionarios\Painel.resx">
+      <DependentUpon>Painel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioExternos\PainelRelatorioExternos.resx">
+      <DependentUpon>PainelRelatorioExternos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\RelatorioAluno\RelatorioAluno.resx">
+      <DependentUpon>RelatorioAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RelatorioAluno\FormRelatoriosEmpAlunos.resx">
+      <DependentUpon>FormRelatoriosEmpAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="teste.resx">
+      <DependentUpon>teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AcessoBancoDados\AcessoBancoDados.csproj">
+      <Project>{c3273ebc-a96f-4fcc-8121-2740de82ba23}</Project>
+      <Name>AcessoBancoDados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CamadaTransferencia\CamadaTransferencia.csproj">
+      <Project>{8028fc8f-0672-47cd-b662-42166e91bf92}</Project>
+      <Name>CamadaTransferencia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Domain\CamdaDeNegocio.csproj">
+      <Project>{36828b79-998f-4584-ac75-a32a28c92d56}</Project>
+      <Name>CamdaDeNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ViewUser\CacheLogin.csproj">
+      <Project>{74b5a90b-9a9c-489d-941d-839020f402a8}</Project>
+      <Name>CacheLogin</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms\RelatorioProfessor\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
